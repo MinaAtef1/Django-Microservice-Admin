@@ -1,0 +1,74 @@
+{% extends "admin/base.html" %} {% load i18n static %} {% block title %} {{ title }} {% endblock %}
+{% block extrastyle %}
+{{ block.super }}
+<link
+  rel="stylesheet"
+  href="https://toert.github.io/Isolated-Bootstrap/versions/4.0.0-beta/iso_bootstrap4.0.0min.css"
+/>
+
+<style>
+
+  .top-taps {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border-bottom: 1px solid #e3e3e3;
+  }
+  .top-taps a {
+    color: white !important;
+    text-decoration: none!important;
+  }
+
+  .top-taps a:hover {
+    color: #b0a5a5!important;
+  }
+
+  .top-taps a.active {
+    color: #b0a5a5!important;
+  }
+
+  :root {
+      --primary: #000000;
+      --secondary: #000000;
+      --accent: #FFFFFF;
+      --breadcrumbs-bg: #FFFFFF;
+      --breadcrumbs-color: #000000;
+      --breadcrumbs-link-fg: #000000;
+      --breadcrumbs-fg: #545454;
+  }
+
+</style>
+{% endblock %} {% block branding %}
+<div id="branding">
+  <h1 id="site-name">Treyd Admin</h1>
+</div>
+{% endblock %} {% block tabs %}
+<div class="bootstrap">
+  <div class="nav nav-tabs top-taps">
+
+
+    {% for app in admin_apps %}
+    
+    
+      {% if app.active %}
+      
+      <div class="nav-item">
+          <a type="submit"  href="{{app.app_url}}" onclick="document.getElementById('{{app.app_name}}').submit();"  class="nav-link active ">{{ app.app_name }}</a>
+        </div>
+      {%  else %}
+      <div class="nav-item">
+        <form action="{{app.app_url}}" method="post"  id="{{app.app_name}}">
+          <input type="hidden" name="user_id" value="{{ request.user.id }}">
+          <input type="hidden" name="{{microservice_header}}" value="{{microservice_secret_key}}">
+          <a type="submit"  href="javascript:{}" onclick="document.getElementById('{{app.app_name}}').submit();"  class="nav-link ">{{ app.app_name }}</a>
+        </form>
+        </div>
+  
+      {% endif %}"
+      
+    
+        {% endfor %}
+
+  </div>
+</div>
+{% endblock %}
