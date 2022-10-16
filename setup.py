@@ -4,7 +4,7 @@ from glob import glob
 
 setup(
     name='django-microservice-admin',
-    version='0.1.1',
+    version='0.1.2',
     license='MIT',
     author="Mina Atef",
     author_email='mina.atef0@gmail.com',
