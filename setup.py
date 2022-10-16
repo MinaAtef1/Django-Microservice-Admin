@@ -8,10 +8,10 @@ setup(
     license='MIT',
     author="Mina Atef",
     author_email='mina.atef0@gmail.com',
-    packages=['dajngo_microservice_admin', 'dajngo_microservice_admin.migrations', 'dajngo_microservice_admin.template',]
+    packages=['django_microservice_admin', 'django_microservice_admin.migrations', 'django_microservice_admin.templates'],
     data_files = [
         ('migrations', glob('migrations/*')), 
-        ('template', glob('template/*')), 
+        ('templates', glob('templates/*')), 
     ],
     
     url='https://github.com/minaaaatef/Django-Microservice-Admin',

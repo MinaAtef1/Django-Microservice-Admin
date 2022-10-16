@@ -3,7 +3,7 @@
 from django.urls import path
 from django.views.decorators.csrf import csrf_exempt
 
-from microservice_admin.views import microservice_admin_view
+from .views import microservice_admin_view
 
 
 urlpatterns = [

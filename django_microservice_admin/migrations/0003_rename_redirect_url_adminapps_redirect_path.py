@@ -6,7 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('microservice_admin', '0002_auto_20221011_1009'),
+        ('django_microservice_admin', '0002_auto_20221011_1009'),
     ]
 
     operations = [

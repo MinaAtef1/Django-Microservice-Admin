@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from microservice_admin.jwt_serializer import jwt_serializer
+from .jwt_serializer import jwt_serializer
 from . import models
 from django.contrib import admin
 from django.conf import settings

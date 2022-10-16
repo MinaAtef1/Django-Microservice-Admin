@@ -4,10 +4,11 @@ from django.apps import AppConfig
 from django.conf import settings
 import sys
 from django.urls import reverse
+from django.urls.exceptions import NoReverseMatch
 
 class MicroserviceAdminConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'microservice_admin'
+    name = 'django_microservice_admin'
 
     @transaction.atomic
     def ready(self):
@@ -27,9 +28,11 @@ class MicroserviceAdminConfig(AppConfig):
             AdminApps.objects.get_or_create(
                 app_name=settings.MICROSERVICE_ADMIN_APP_NAME,
             )
-
-            AdminApps.objects.filter(app_name=settings.MICROSERVICE_ADMIN_APP_NAME).update(
-                app_url=settings.MICROSERVICE_ADMIN_APP_HOST.rstrip('/'),
-                redirect_path = reverse('microservice_admin_view'),
-                app_order=settings.MICROSERVICE_ADMIN_APP_ORDER,
-            )
+            try:
+                AdminApps.objects.filter(app_name=settings.MICROSERVICE_ADMIN_APP_NAME).update(
+                    app_url=settings.MICROSERVICE_ADMIN_APP_HOST.rstrip('/'),
+                    redirect_path = reverse('microservice_admin_view'),
+                    app_order=settings.MICROSERVICE_ADMIN_APP_ORDER,
+                )
+            except NoReverseMatch:
+                raise Exception(f"Missing reverse('microservice_admin_view') in urls.py, please add it to your urls.py")

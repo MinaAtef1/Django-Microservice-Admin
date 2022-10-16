@@ -1,0 +1,19 @@
+[project]
+name = "django-microservice-admin"
+description = "An App that connects all admins from all microservices"
+version = "0.0.1"
+authors = [
+    { name = "Mina Atef", email = "mina.atef0@gmail.com" }
+]
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+]
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ['djangorestframework','djangorestframework-simplejwt']
+
+
