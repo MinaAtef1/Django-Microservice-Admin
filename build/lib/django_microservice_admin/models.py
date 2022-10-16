@@ -1,6 +1,7 @@
 from email.policy import default
 from django.db import models
 from django.conf import settings
+from .admin import admin_site
 
 
 
@@ -16,3 +17,5 @@ class AdminApps(models.Model):
     class Meta:
         verbose_name = 'Admin App'
         verbose_name_plural = 'Admin Apps'
+
+admin_site.register(AdminApps)

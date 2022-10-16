@@ -1,0 +1,2 @@
+djangorestframework-simplejwt>=4.4.0
+djangorestframework>=3.9.1

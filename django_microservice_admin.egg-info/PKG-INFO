@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: django-microservice-admin
+Version: 0.1.1
+Summary: An App that connects all admins from all microservices
+Home-page: https://github.com/minaaaatef/Django-Microservice-Admin
+Author: Mina Atef
+Author-email: mina.atef0@gmail.com
+License: MIT
+Keywords: django,buttons,admin,actions
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+
