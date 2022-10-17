@@ -55,8 +55,7 @@ MICROSERVICE_ADMIN_REGISTER_SETTINGS = True
 MICROSERVICE_ADMIN_TITLE = "Microservice Admin"
 
 ```
-| Attribute | Required/default | description |
-| MICROSERVICE_ADMIN_APP_NAME   | REQUIRED     | The app name that appears on the navbar, each app should have a unique name    |
+| MICROSERVICE_ADMIN_APP_NAME   | Required/default     | The app name that appears on the navbar, each app should have a unique name    |
 | --- | --- | --- |
 | MICROSERVICE_ADMIN_APP_HOST      | REQUIRED   | The link to the app host    |
 | MICROSERVICE_ADMIN_APP_ORDER     | REQUIRED   | The navbar order for the app|
