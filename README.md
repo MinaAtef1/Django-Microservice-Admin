@@ -35,6 +35,24 @@ INSTALLED_APPS = [
     'django.contrib.admin',
 ]
 ```
+- Make sure you have `templates` in the templates directory
+```python
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['templates'], # <---- this line
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+```
 - Add the urls to the app urls
 ``` python
 from django_microservice_admin.admin import admin_site
