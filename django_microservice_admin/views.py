@@ -25,5 +25,5 @@ def microservice_admin_view(request):
         user = get_user_model().objects.get(id=valid_data['user_id'])
 
         login(request, user)
-
-        return redirect(reverse('admin:index'))
+        tab_name = request.POST.get('tab_name')
+        return redirect(reverse(f'{tab_name}:index'))

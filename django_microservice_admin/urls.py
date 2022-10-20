@@ -7,5 +7,5 @@ from .views import microservice_admin_view
 
 
 urlpatterns = [
-    path('microservice_admin/', csrf_exempt(microservice_admin_view), name='microservice_admin_view'),
+    path('', csrf_exempt(microservice_admin_view), name='microservice_admin_view'),
 ]
