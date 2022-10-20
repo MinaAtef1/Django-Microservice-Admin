@@ -1,1 +1,4 @@
 *.pyc
+build/
+dist/
+django_microservice_admin.egg-info/

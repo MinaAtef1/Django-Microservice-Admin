@@ -1,3 +1,3 @@
-recursive-include dajngo_microservice_admin/templates *
+recursive-include django_microservice_admin/templates *
 include ./README.md
 include ./LICENSE

@@ -40,7 +40,7 @@ class MicroserviceAdmin(admin.AdminSite):
         context['microservice_admin_title'] = MICROSERVICE_ADMIN_TITLE
         return context
 
-    def __init__(self, name, order, include_default_models):
+    def __init__(self, name, order, include_default_models=True):
         super().__init__(name)
 
         if 'makemigrations' in sys.argv or 'migrate' in sys.argv:
