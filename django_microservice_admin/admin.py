@@ -13,7 +13,7 @@ import sys
 MICROSERVICE_ADMIN_TITLE = getattr(settings, 'MICROSERVICE_ADMIN_TITLE', 'Microservice Admin')
 
 
-class ModelsAdmin(admin.AdminSite):
+class MicroserviceAdmin(admin.AdminSite):
 
     def each_context(self, request):
         context = super().each_context(request)
@@ -61,7 +61,3 @@ class ModelsAdmin(admin.AdminSite):
             redirect_path=settings.MICROSERVICE_REDIRECT_PATH,
             app_order=order,
         )
-
-
-admin_site = ModelsAdmin(name='microservice_admin', order=1, include_default_models=True)
-s_site = ModelsAdmin(name='second', order=2, include_default_models=True)
